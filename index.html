@@ -1,0 +1,2493 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>CovScript Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#" class="toc-h1 toc-link" data-title="版权信息">版权信息</a>
+          </li>
+          <li>
+            <a href="#-2" class="toc-h1 toc-link" data-title="类型参考">类型参考</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#number" class="toc-h2 toc-link" data-title="类型参考">number 数值类型</a>
+                  </li>
+                  <li>
+                    <a href="#boolean" class="toc-h2 toc-link" data-title="类型参考">boolean 逻辑类型</a>
+                  </li>
+                  <li>
+                    <a href="#pointer" class="toc-h2 toc-link" data-title="类型参考">pointer 指针类型</a>
+                  </li>
+                  <li>
+                    <a href="#char" class="toc-h2 toc-link" data-title="类型参考">char 字符类型</a>
+                  </li>
+                  <li>
+                    <a href="#string" class="toc-h2 toc-link" data-title="类型参考">string 文字类型</a>
+                  </li>
+                  <li>
+                    <a href="#array" class="toc-h2 toc-link" data-title="类型参考">array 数组类型</a>
+                  </li>
+                  <li>
+                    <a href="#list" class="toc-h2 toc-link" data-title="类型参考">list 线性表类型</a>
+                  </li>
+                  <li>
+                    <a href="#pair" class="toc-h2 toc-link" data-title="类型参考">pair 映射类型</a>
+                  </li>
+                  <li>
+                    <a href="#hash_map" class="toc-h2 toc-link" data-title="类型参考">hash_map 散列表类型</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#-3" class="toc-h1 toc-link" data-title="语法参考">语法参考</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#-4" class="toc-h2 toc-link" data-title="语法参考">预处理指令</a>
+                  </li>
+                  <li>
+                    <a href="#package" class="toc-h2 toc-link" data-title="语法参考">引入 Package</a>
+                  </li>
+                  <li>
+                    <a href="#package-2" class="toc-h2 toc-link" data-title="语法参考">声明 Package</a>
+                  </li>
+                  <li>
+                    <a href="#-5" class="toc-h2 toc-link" data-title="语法参考">变量定义</a>
+                  </li>
+                  <li>
+                    <a href="#-6" class="toc-h2 toc-link" data-title="语法参考">新建一个对象</a>
+                  </li>
+                  <li>
+                    <a href="#-7" class="toc-h2 toc-link" data-title="语法参考">申请一块内存</a>
+                  </li>
+                  <li>
+                    <a href="#-8" class="toc-h2 toc-link" data-title="语法参考">运算符与表达式</a>
+                  </li>
+                  <li>
+                    <a href="#-9" class="toc-h2 toc-link" data-title="语法参考">条件运算符</a>
+                  </li>
+                  <li>
+                    <a href="#-10" class="toc-h2 toc-link" data-title="语法参考">临时作用域与名称空间</a>
+                  </li>
+                  <li>
+                    <a href="#-11" class="toc-h2 toc-link" data-title="语法参考">分支语句</a>
+                  </li>
+                  <li>
+                    <a href="#-12" class="toc-h2 toc-link" data-title="语法参考">循环语句</a>
+                  </li>
+                  <li>
+                    <a href="#-13" class="toc-h2 toc-link" data-title="语法参考">控制语句</a>
+                  </li>
+                  <li>
+                    <a href="#-14" class="toc-h2 toc-link" data-title="语法参考">异常处理</a>
+                  </li>
+                  <li>
+                    <a href="#-15" class="toc-h2 toc-link" data-title="语法参考">函数</a>
+                  </li>
+                  <li>
+                    <a href="#lambda" class="toc-h2 toc-link" data-title="语法参考">Lambda表达式</a>
+                  </li>
+                  <li>
+                    <a href="#-16" class="toc-h2 toc-link" data-title="语法参考">名称查找</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#-17" class="toc-h1 toc-link" data-title="内建类型，函数及变量参考">内建类型，函数及变量参考</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#-18" class="toc-h2 toc-link" data-title="内建类型，函数及变量参考">说明</a>
+                  </li>
+                  <li>
+                    <a href="#-19" class="toc-h2 toc-link" data-title="内建类型，函数及变量参考">全局</a>
+                  </li>
+                  <li>
+                    <a href="#-26" class="toc-h2 toc-link" data-title="内建类型，函数及变量参考">路径名称空间</a>
+                  </li>
+                  <li>
+                    <a href="#-29" class="toc-h2 toc-link" data-title="内建类型，函数及变量参考">字符类型扩展</a>
+                  </li>
+                  <li>
+                    <a href="#-30" class="toc-h2 toc-link" data-title="内建类型，函数及变量参考">文字类型扩展</a>
+                  </li>
+                  <li>
+                    <a href="#-31" class="toc-h2 toc-link" data-title="内建类型，函数及变量参考">链表类型扩展</a>
+                  </li>
+                  <li>
+                    <a href="#-33" class="toc-h2 toc-link" data-title="内建类型，函数及变量参考">数组类型扩展</a>
+                  </li>
+                  <li>
+                    <a href="#-35" class="toc-h2 toc-link" data-title="内建类型，函数及变量参考">映射类型扩展</a>
+                  </li>
+                  <li>
+                    <a href="#-36" class="toc-h2 toc-link" data-title="内建类型，函数及变量参考">哈希表类型扩展</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#-38" class="toc-h1 toc-link" data-title="扩展类型，函数及变量参考">扩展类型，函数及变量参考</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#-39" class="toc-h2 toc-link" data-title="扩展类型，函数及变量参考">说明</a>
+                  </li>
+                  <li>
+                    <a href="#regex" class="toc-h2 toc-link" data-title="扩展类型，函数及变量参考">regex 扩展</a>
+                  </li>
+                  <li>
+                    <a href="#darwin" class="toc-h2 toc-link" data-title="扩展类型，函数及变量参考">Darwin 扩展</a>
+                  </li>
+                  <li>
+                    <a href="#darwin-drawable" class="toc-h2 toc-link" data-title="扩展类型，函数及变量参考">Darwin Drawable 名称空间</a>
+                  </li>
+                  <li>
+                    <a href="#sqlite" class="toc-h2 toc-link" data-title="扩展类型，函数及变量参考">SQLite 扩展</a>
+                  </li>
+                  <li>
+                    <a href="#network" class="toc-h2 toc-link" data-title="扩展类型，函数及变量参考">Network 扩展</a>
+                  </li>
+                  <li>
+                    <a href="#tcp-2" class="toc-h2 toc-link" data-title="扩展类型，函数及变量参考">TCP 套接字类型扩展</a>
+                  </li>
+                  <li>
+                    <a href="#udp-2" class="toc-h2 toc-link" data-title="扩展类型，函数及变量参考">UDP 套接字类型扩展</a>
+                  </li>
+                  <li>
+                    <a href="#api" class="toc-h2 toc-link" data-title="扩展类型，函数及变量参考">流式 API 扩展</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#-40" class="toc-h1 toc-link" data-title="扩展指南">扩展指南</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#-41" class="toc-h2 toc-link" data-title="扩展指南">注意事项</a>
+                  </li>
+                  <li>
+                    <a href="#covariant-script-extension" class="toc-h2 toc-link" data-title="扩展指南">Covariant Script Extension 简介</a>
+                  </li>
+                  <li>
+                    <a href="#covariant-script-callable" class="toc-h2 toc-link" data-title="扩展指南">Covariant Script Callable 简介</a>
+                  </li>
+                  <li>
+                    <a href="#cpp-native-interface" class="toc-h2 toc-link" data-title="扩展指南">CPP Native Interface 简介</a>
+                  </li>
+                  <li>
+                    <a href="#-42" class="toc-h2 toc-link" data-title="扩展指南">准备工作</a>
+                  </li>
+                  <li>
+                    <a href="#-43" class="toc-h2 toc-link" data-title="扩展指南">需要的头文件</a>
+                  </li>
+                  <li>
+                    <a href="#covariant-script" class="toc-h2 toc-link" data-title="扩展指南">Covariant Script 内建类型</a>
+                  </li>
+                  <li>
+                    <a href="#-44" class="toc-h2 toc-link" data-title="扩展指南">扩展类对象</a>
+                  </li>
+                  <li>
+                    <a href="#-45" class="toc-h2 toc-link" data-title="扩展指南">入口函数</a>
+                  </li>
+                  <li>
+                    <a href="#-46" class="toc-h2 toc-link" data-title="扩展指南">向扩展中添加变量或函数</a>
+                  </li>
+                  <li>
+                    <a href="#covariant-script-2" class="toc-h2 toc-link" data-title="扩展指南">Covariant Script 被保护的变量</a>
+                  </li>
+                  <li>
+                    <a href="#-47" class="toc-h2 toc-link" data-title="扩展指南">向优化器请求优化函数的调用</a>
+                  </li>
+                  <li>
+                    <a href="#-48" class="toc-h2 toc-link" data-title="扩展指南">类型扩展</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/covscript/covscript'>CovScript interpreter</a></li>
+            <li><a href='https://github.com/covscript/covscript-intellij'>CovScript IDE</a></li>
+            <li><a href='https://github.com/covscript/cspkg'>CovScript package manager</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <p><strong>Covariant Script编程语言</strong> <br/>
+ <strong>参考文档(STD20180301)</strong></p>
+<h1 id=''>版权信息</h1>
+<p>版权所有 © 2018 Michael Lee(李登淳)</p>
+
+<p>此程序是免费软件：您可以根据自由软件基金会发布的 GNU Affero 通用公共许可协议（版本3的许可协议）或（可选）更新的版本对其进行重新分发和/或修改。<br/>
+我们在分发此程序时希望它会有用，但没有任何的保证; 甚至没有对适销性或特定用途的适用性的暗示保证。有关更多详细信息，请参阅 GNU Affero 通用公共许可协议。<br/>
+您应该收到 GNU Affero 通用公共许可协议的副本以及此程序。 如果没有，请参阅：http://www.gnu.org/licenses<br/>
+使用此程序即代表你同意并遵守 GNU Affero 通用公共许可协议的所有条款，保留所有权利。</p>
+
+<p>Github主页: https://github.com/covscript<br/>
+Email: <a href="mailto:mikecovlee@163.com">mikecovlee@163.com</a></p>
+<h1 id='-2'>类型参考</h1>
+<p>类型信息表和运算符表请参照附录</p>
+<h2 id='number'>number 数值类型</h2>
+<p><code>number</code> 的字面量由 0~9 十个数和小数点组成，如 <code>12</code>，<code>3.14</code> 等<br/>
+<code>number</code> 表示的数仅限于全体实数<br/>
+<code>number</code> 的初始值为<code>0</code><br/></p>
+<h2 id='boolean'>boolean 逻辑类型</h2>
+<p><code>boolean</code> 的字面量只有两个，分别是 <code>true</code>（真）和 <code>false</code>（假）<br/>
+<code>boolean</code> 的初始值为 <code>true</code>（真）<br/></p>
+<h2 id='pointer'>pointer 指针类型</h2>
+<p><code>pointer</code> 没有字面量<br/>
+<code>pointer</code> 指向一块内存空间，可使用gcnew运算符申请一块内存空间<br/>
+<code>pointer</code> 的初始值为 <code>null</code>（空指针）<br/>
+<code>null</code>（空指针）指向一块特殊的内存空间，不允许解引用一个空指针<br/>
+不再使用的内存空间将由 GC（垃圾回收器）自动回收<br/>
+可使用解引用运算符访问指针指向的内存空间<br/>
+若指针指向的是结构体实例，可使用箭头运算符访问结构体的成员<br/></p>
+<h2 id='char'>char 字符类型</h2>
+<p><code>char</code> 的字面量是由单引号括起的单个ASCII字符，如<code>&#39;A&#39;</code>，<code>&#39;C&#39;</code>等<br/>
+特殊符号需使用转义序列来表示：</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">转义序列</th>
+<th style="text-align: center">符号</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>\a</code></td>
+<td style="text-align: center">响铃</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>\b</code></td>
+<td style="text-align: center">退格</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>\f</code></td>
+<td style="text-align: center">换页</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>\n</code></td>
+<td style="text-align: center">换行</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>\r</code></td>
+<td style="text-align: center">回车</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>\t</code></td>
+<td style="text-align: center">水平制表</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>\v</code></td>
+<td style="text-align: center">垂直制表</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>\\</code></td>
+<td style="text-align: center">反斜杠</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>\&#39;</code></td>
+<td style="text-align: center">单引号</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>\&quot;</code></td>
+<td style="text-align: center">双引号</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>\0</code></td>
+<td style="text-align: center">空字符</td>
+</tr>
+</tbody></table>
+
+<p><code>char</code> 的初始值为 <code>\0</code>（空字符）<br/></p>
+<h2 id='string'>string 文字类型</h2>
+<p><code>string</code> 的字面量是由双引号括起的任意个数 ASCII 字符，如<code>&quot;Hello&quot;</code><br/>
+<code>string</code> 不支持 Unicode 文字<br/>
+<code>string</code> 的初始值为<code>&quot;&quot;</code>（空串）<br/>
+可使用下标运算符访问组成文字的字符，下标不能超出范围(0~文字长度-1)<br/>
+多段文字可以使用加运算符连接<br/></p>
+<h2 id='array'>array 数组类型</h2>
+<p><code>array</code> 的字面量为大括号扩起的以逗号分隔的任意个数元素，如 <code>{1,2,3}</code><br/>
+<code>array</code> 是一种元素均匀分布的顺序容器<br/>
+<code>array</code> 的初始值为<code>{}</code>（空数组）<br/>
+可使用下标运算符访问数组中的元素，下标不能小于零<br/>
+Covariant Script 编程语言的数组是变长数组(VLA)，若下标超出范围数组将自动增长，增长的部分自动填<code>0</code><br/></p>
+<h2 id='list'>list 线性表类型</h2>
+<p><code>list</code> 没有字面量<br/>
+<code>list</code> 是一种元素不均匀分布的顺序容器<br/>
+<code>list</code> 的初始值为空表<br/></p>
+<h2 id='pair'>pair 映射类型</h2>
+<p><code>pair</code> 的字面量为冒号对应的一个键值对，如<code>2:3</code><br/>
+<code>pair</code> 的初始值为<code>0:0</code>（空映射）<br/></p>
+<h2 id='hash_map'>hash_map 散列表类型</h2>
+<p><code>hash_map</code> 没有字面量<br/>
+<code>hash_map</code> 是一种元素均匀分布的无序容器<br/>
+<code>hash_map</code> 要求其存储的映射的键的类型必须支持生成哈希值<br/>
+<code>hash_map</code> 的初始值为空表<br/>
+可使用下标运算符访问散列表中的键对应的值，若键不存在，将自动建立键与<code>0</code>组成的映射<br/></p>
+<h1 id='-3'>语法参考</h1><h2 id='-4'>预处理指令</h2><pre class="highlight objective_c"><code><span class="cp"># 注释
+# 以#开头的一行为注释
+</span><span class="err">@begin</span>
+  <span class="err">语句</span>
+<span class="k">@end</span>
+</code></pre>
+<p>在 <code>@begin</code> 和 <code>@end</code> 之间的代码将视为一行语句<br/>
+也就是说， <code>@begin</code> 和 <code>@end</code> 之间的所有换行符都将会被忽略</p>
+<h2 id='package'>引入 Package</h2><pre class="highlight plaintext"><code>import Package名
+</code></pre>
+<p>引入的Package可以是 *.csp 文件(CovScript 包)或者是 *.cse 文件(CovScript 扩展)<br/>
+当两者同时存在时会优先引入 *.csp 文件(CovScript 包)</p>
+<h2 id='package-2'>声明 Package</h2><pre class="highlight plaintext"><code>package Package名
+</code></pre>
+<p>原则上包名应和文件名相同</p>
+<h2 id='-5'>变量定义</h2><pre class="highlight plaintext"><code>var 变量名 = 表达式
+# 定义一个变量，初始值为表达式的值
+const var 常量名 = 表达式
+# 定义一个常量，其值为表达式的值
+</code></pre>
+<p>常量和变量的处理方式完全不同，常量类似于 C++中的 <code>constexpr</code>，其实际上仅存在于编译期。使用常量将有利于提高性能，编译器在某些情况下也会自动进行常量折叠，但显式声明将帮助编译器更进一步优化您的程序<br/></p>
+<h2 id='-6'>新建一个对象</h2><pre class="highlight plaintext"><code>new 类型
+# 新建一个指定类型的对象
+</code></pre><h2 id='-7'>申请一块内存</h2><pre class="highlight plaintext"><code>gcnew 类型
+# 申请一块内存，其中存储的变量为指定类型，返回指向这块内存的指针
+</code></pre>
+<p>申请的内存将会由垃圾回收器自动释放</p>
+<h2 id='-8'>运算符与表达式</h2>
+<p>表达式由操作数和运算符组成</p>
+<pre class="highlight plaintext"><code>操作数 运算符 操作数
+</code></pre>
+<p>一般有左右两个操作数的运算符是二元运算符<br/>
+只有一个操作数的运算符是一元运算符<br/>
+二元运算符有结合律，左结合是从右向左运算，右结合是从左向右运算<br/>
+所有的运算符都有优先级，优先级越高越先计算</p>
+<h2 id='-9'>条件运算符</h2><pre class="highlight javascript tab-javascript"><code><span class="err">逻辑表达式</span> <span class="p">?</span> <span class="err">表达式</span><span class="mi">1</span> <span class="p">:</span> <span class="err">表达式</span><span class="mi">2</span>
+</code></pre>
+<p>逻辑表达式的值为真时整个表达式的值为表达式1<br/>
+逻辑表达式的值为假时整个表达式的值为表达式2</p>
+<h2 id='-10'>临时作用域与名称空间</h2><pre class="highlight plaintext"><code>block
+  语句块
+end
+# 定义一个临时作用域
+</code></pre>
+<p>临时作用域中的变量会在离开作用域后销毁</p>
+
+<p><br/><br/></p>
+<pre class="highlight plaintext"><code>namespace 名称空间名
+  语句块
+end
+# 定义一个名称空间
+</code></pre>
+<p>名称空间中只允许引入其他名称空间，变量定义，函数定义，类型定义以及名称空间定义</p>
+
+<p><br/><br/></p>
+<pre class="highlight plaintext"><code>using 名称空间名
+</code></pre>
+<p>引入一个名称空间，这将会在当前作用域中建立引入的名称空间中所有变量的引用</p>
+<h2 id='-11'>分支语句</h2><pre class="highlight plaintext"><code>if 逻辑表达式
+  语句块
+end
+</code></pre>
+<p>逻辑表达式的值为真则执行语句块</p>
+
+<p><br/><br/></p>
+<pre class="highlight plaintext"><code>if 逻辑表达式
+  语句块1
+else
+  语句块2
+end
+</code></pre>
+<p>逻辑表达式的值为真则执行语句块1<br/>
+逻辑表达式的值为假则执行语句块2</p>
+
+<p><br/><br/></p>
+<pre class="highlight plaintext"><code>switch 表达式
+  case 常量标签
+    语句块
+  end
+  default
+    语句块
+  end
+end
+</code></pre>
+<p>执行与表达式的值相等的常量标签对应的<code>case</code>中的语句块<br/>
+当无匹配的常量标签时会执行<code>default</code>中的语句块，如<code>default</code>未找到则跳出<br/>
+常量标签的类型必须支持生成哈希值</p>
+<h2 id='-12'>循环语句</h2><pre class="highlight plaintext"><code>while 逻辑表达式
+  语句块
+end
+</code></pre>
+<p>当逻辑表达式的值为真时循环执行语句块</p>
+
+<p><br/><br/></p>
+<pre class="highlight plaintext"><code>loop
+  语句块
+until 逻辑表达式
+end
+</code></pre>
+<p>直到逻辑表达式的值为真时跳出循环</p>
+
+<p><br/><br/></p>
+<pre class="highlight plaintext"><code>loop
+  语句块
+end
+</code></pre>
+<p>循环执行语句块直到用户手动跳出</p>
+
+<p><br/><br/></p>
+<pre class="highlight plaintext"><code>for 变量名 = 表达式 to 表达式
+  语句块
+end
+</code></pre>
+<p>定义一个变量在闭区间中遍历，步长为1</p>
+
+<p><br/><br/></p>
+<pre class="highlight plaintext"><code>for 变量名 = 表达式 to 表达式 step 表达式
+  语句块
+end
+</code></pre>
+<p>定义一个变量在闭区间中遍历，步长为用户指定的值</p>
+
+<p><br/><br/></p>
+<pre class="highlight plaintext"><code>for 变量名 iterate 表达式
+  语句块
+end
+</code></pre>
+<p>表达式的值必须是一个支持 <code>for</code> 遍历的容器<br/>
+定义一个变量正序遍历容器</p>
+<h2 id='-13'>控制语句</h2><pre class="highlight plaintext"><code>break
+# 跳出循环
+continue
+# 进入下一轮循环
+return
+# 结束函数并返回 null
+return 表达式
+# 结束函数并返回表达式的值
+</code></pre><h2 id='-14'>异常处理</h2><pre class="highlight plaintext"><code>throw 异常 # 抛出一个异常
+try
+  语句块
+catch 异常名
+  语句块
+end
+</code></pre>
+<p>测试代码是否会抛出异常，如抛出则抓取异常</p>
+<h2 id='-15'>函数</h2><pre class="highlight plaintext"><code>function 函数名(参数列表（可选）)
+  语句块
+end
+# 定义一个函数
+</code></pre>
+<p>参数列表中的参数只能指定名称，参数名不可重复，各参数之间以逗号分隔，如：</p>
+<pre class="highlight plaintext"><code>function test(a0,a1,a2)
+end
+</code></pre><h2 id='lambda'>Lambda表达式</h2><pre class="highlight plaintext"><code>[](参数列表（可选）) -&gt; 表达式
+# 定义一个Lambda表达式
+</code></pre>
+<p>参数列表中的参数只能指定名称，参数名不可重复，各参数之间以逗号分隔<br/>
+Lambda 表达式是一种匿名函数，调用 Lambda 表达式将计算表达式的值并返回</p>
+<h2 id='-16'>名称查找</h2><pre class="highlight ruby tab-ruby"><code><span class="err">变量名</span>
+<span class="c1"># 从最上层作用域开始向下查找变量</span>
+<span class="n">current</span><span class="o">.</span><span class="err">变量名</span>
+<span class="c1"># 查找当前作用域中的变量</span>
+<span class="n">global</span><span class="o">.</span><span class="err">变量名</span>
+<span class="c1"># 查找全局作用域中的变量</span>
+<span class="err">名称空间名</span><span class="o">.</span> <span class="err">变量名</span>
+<span class="c1"># 查找名称空间中的变量</span>
+<span class="err">变量名</span><span class="o">.</span><span class="err">变量名</span>
+<span class="c1"># 查找结构体或扩展中的变量</span>
+</code></pre>
+<p>作用与结构以及变量查找方式如图所示</p>
+<pre class="highlight plaintext"><code>当前作用域  ↓
+   下层作用域  ↓
+      全局作用域
+</code></pre>
+<p>注意: 对于最后一种访问方法,仅变量类型为结构或支持扩展的类型时可用，如访问的是扩展或结构中的函数，将会把点运算符左边的变量作为函数的第一个参数传入。<br/>
+也就是说: <code>char.isspace(ch)</code> 等价于 <code>ch.isspace()</code></p>
+<h1 id='-17'>内建类型，函数及变量参考</h1><h2 id='-18'>说明</h2>
+<p>函数在本文档中表示为</p>
+<pre class="highlight plaintext"><code>返回类型 函数名 ( 参数列表(可选) )
+</code></pre>
+<p>返回类型标注为 <code>void</code> 的将返回 <code>null</code></p>
+
+<p>参数列表中的参数表示为</p>
+<pre class="highlight plaintext"><code>参数类型 参数名(可选)
+</code></pre>
+<p>参数类型和返回类型如用中括号(<code>[ ]</code>)标记，
+则表示这个类型不是 Covariant Script 内建类型</p>
+<h2 id='-19'>全局</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>context</code></td>
+<td style="text-align: center">运行环境</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>char</code></td>
+<td style="text-align: center">字符类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number</code></td>
+<td style="text-align: center">数值类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean</code></td>
+<td style="text-align: center">逻辑类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>pointer</code></td>
+<td style="text-align: center">指针类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string</code></td>
+<td style="text-align: center">文字类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>list</code></td>
+<td style="text-align: center">链表类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>array</code></td>
+<td style="text-align: center">数组类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>pair</code></td>
+<td style="text-align: center">映射类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>hash_map</code></td>
+<td style="text-align: center">哈希表类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>exception</code></td>
+<td style="text-align: center">异常名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>iostream</code></td>
+<td style="text-align: center">输入输出流名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>system</code></td>
+<td style="text-align: center">系统名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>runtime</code></td>
+<td style="text-align: center">运行时名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>math</code></td>
+<td style="text-align: center">数学名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number to_integer(var)</code></td>
+<td style="text-align: center">将一个变量转换为整数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string to_string(var)</code></td>
+<td style="text-align: center">将一个变量转换为文字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string type(var)</code></td>
+<td style="text-align: center">获取一个变量的类型名</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var clone(var)</code></td>
+<td style="text-align: center">复制一个变量并返回</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void swap(var,var)</code></td>
+<td style="text-align: center">交换两个变量的值</td>
+</tr>
+</tbody></table>
+<h3 id='exception'>exception 名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>string what([exception])</code></td>
+<td style="text-align: center">获取异常详情</td>
+</tr>
+</tbody></table>
+<h3 id='iostream'>iostream 名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>seekdir</code></td>
+<td style="text-align: center">寻位方向名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>openmode</code></td>
+<td style="text-align: center">打开方式名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>istream</code></td>
+<td style="text-align: center">输入流名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>ostream</code></td>
+<td style="text-align: center">输出流名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[istream/ostream] fstream(string path,[openmode] mode)</code></td>
+<td style="text-align: center">新建一个文件流,具体类型取决于打开方式</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void setprecision(number)</code></td>
+<td style="text-align: center">设置输出精度(<code>to_string</code> 的精度)</td>
+</tr>
+</tbody></table>
+<h3 id='-20'>寻位方向名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>start</code></td>
+<td style="text-align: center">流的开始</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>finish</code></td>
+<td style="text-align: center">流的结尾</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>present</code></td>
+<td style="text-align: center">当前位置</td>
+</tr>
+</tbody></table>
+<h3 id='-21'>打开方式名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>in</code></td>
+<td style="text-align: center">为读打开(输入流)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>out</code></td>
+<td style="text-align: center">为写打开(清空内容,输出流)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>app</code></td>
+<td style="text-align: center">为写打开(追加内容,输出流)</td>
+</tr>
+</tbody></table>
+<h3 id='-22'>输入流名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>char get([istream])</code></td>
+<td style="text-align: center">读取字符</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>char peek([istream])</code></td>
+<td style="text-align: center">读取下一个字符而不删除</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void unget([istream])</code></td>
+<td style="text-align: center">放回字符</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string getline([istream])</code></td>
+<td style="text-align: center">读取一行</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number tell([istream])</code></td>
+<td style="text-align: center">返回流位置指示器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void seek([istream],number pos)</code></td>
+<td style="text-align: center">设置流位置</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void seek_from([istream],[seekdir],number offset)</code></td>
+<td style="text-align: center">设置相对寻位方向的流位置</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean good([istream])</code></td>
+<td style="text-align: center">检查是否有错误</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean eof([istream])</code></td>
+<td style="text-align: center">检查是否到达文件结尾</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var input([istream])</code></td>
+<td style="text-align: center">从流中获取输入(格式化)</td>
+</tr>
+</tbody></table>
+<h3 id='-23'>输出流名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>void put([ostream],char)</code></td>
+<td style="text-align: center">插入字符</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number tell([ostream])</code></td>
+<td style="text-align: center">返回流位置指示器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void seek([ostream],number pos)</code></td>
+<td style="text-align: center">设置流位置</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void seek_from([ostream],[seekdir],number offset)</code></td>
+<td style="text-align: center">设置相对寻位方向的流位置</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void flush([ostream])</code></td>
+<td style="text-align: center">与底层存储设备同步</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean good([ostream])</code></td>
+<td style="text-align: center">检查是否有错误</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void print([ostream],var)</code></td>
+<td style="text-align: center">向流中输出内容,仅可输出支持 <code>to_string</code> 的类型(不换行)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void println([ostream],var)</code></td>
+<td style="text-align: center">向流中输出内容,仅可输出支持 <code>to_string</code> 的类型(换行)</td>
+</tr>
+</tbody></table>
+<h3 id='system'>system 名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>console</code></td>
+<td style="text-align: center">控制台名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>file</code></td>
+<td style="text-align: center">文件名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>path</code></td>
+<td style="text-align: center">路径名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>args</code></td>
+<td style="text-align: center">运行参数(<code>Array</code>)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>max</code></td>
+<td style="text-align: center">数值类型最大值(<code>Number</code>)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>inf</code></td>
+<td style="text-align: center">数值类型正无穷(<code>Number</code>)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>in</code></td>
+<td style="text-align: center">标准输入流</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>out</code></td>
+<td style="text-align: center">标准输出流</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number run(string)</code></td>
+<td style="text-align: center">在系统环境中运行一条指令,返回错误码</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string getenv(string)</code></td>
+<td style="text-align: center">获取环境变量的值并返回</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void exit(number)</code></td>
+<td style="text-align: center">清理资源并退出</td>
+</tr>
+</tbody></table>
+<h3 id='-24'>控制台名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>number terminal_width()</code></td>
+<td style="text-align: center">获取控制台宽度</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number terminal_height()</code></td>
+<td style="text-align: center">获取控制台高度</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void gotoxy(number x, number y)</code></td>
+<td style="text-align: center">移动光标</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void echo(boolean)</code></td>
+<td style="text-align: center">设置光标可见性</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void clrscr()</code></td>
+<td style="text-align: center">清屏</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>char getch()</code></td>
+<td style="text-align: center">获取键盘输入</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>bool kbhit()</code></td>
+<td style="text-align: center">判断是否有键盘输入</td>
+</tr>
+</tbody></table>
+<h3 id='-25'>文件名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>boolean copy(string,string)</code></td>
+<td style="text-align: center">复制文件</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean remove(string)</code></td>
+<td style="text-align: center">删除文件</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean exists(string)</code></td>
+<td style="text-align: center">判断文件是否存在</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean rename(string,string)</code></td>
+<td style="text-align: center">重命名/移动文件</td>
+</tr>
+</tbody></table>
+<h2 id='-26'>路径名称空间</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>type</code></td>
+<td style="text-align: center">路径类型名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>info</code></td>
+<td style="text-align: center">路径信息名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>separator</code></td>
+<td style="text-align: center">路径分隔符</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>delimiter</code></td>
+<td style="text-align: center">路径定界符</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>array scan(string)</code></td>
+<td style="text-align: center">扫描路径</td>
+</tr>
+</tbody></table>
+<h3 id='-27'>路径类型名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>unknown</code></td>
+<td style="text-align: center">未知</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>fifo</code></td>
+<td style="text-align: center">管道</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>sock</code></td>
+<td style="text-align: center">套接字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>chr</code></td>
+<td style="text-align: center">字符设备</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>dir</code></td>
+<td style="text-align: center">文件夹</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>blk</code></td>
+<td style="text-align: center">块设备</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>reg</code></td>
+<td style="text-align: center">常规</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>lnk</code></td>
+<td style="text-align: center">链接</td>
+</tr>
+</tbody></table>
+<h3 id='-28'>路径信息名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>string name([path_info])</code></td>
+<td style="text-align: center">获取路径名</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[path_type] type([path_info])</code></td>
+<td style="text-align: center">获取路径类型</td>
+</tr>
+</tbody></table>
+<h3 id='runtime'>runtime 名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>std_version</code></td>
+<td style="text-align: center">标准版本号(<code>Number</code>)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void info()</code></td>
+<td style="text-align: center">解释器版本信息</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string get_import_path()</code></td>
+<td style="text-align: center">获取引入目录</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number time()</code></td>
+<td style="text-align: center">获取计时器的读数,单位毫秒</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void delay(number)</code></td>
+<td style="text-align: center">使程序暂停一段时间,单位毫秒</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number rand(number,number)</code></td>
+<td style="text-align: center">获取区间内的伪随机数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number randint(number,number)</code></td>
+<td style="text-align: center">获取区间内的伪随机整数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[exception] exception(string)</code></td>
+<td style="text-align: center">新建运行时异常</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[hash_value] hash(var)</code></td>
+<td style="text-align: center">计算一个变量的哈希值</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[expression] build([context],string)</code></td>
+<td style="text-align: center">构建一个可用于计算的表达式</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var solve([context],[expression])</code></td>
+<td style="text-align: center">计算一个表达式</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[namespace] dynamic_import([context],string path,string name)</code></td>
+<td style="text-align: center">动态加载一个扩展,规则与 import 语句相同</td>
+</tr>
+</tbody></table>
+<h2 id='-29'>字符类型扩展</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>boolean isalnum(char)</code></td>
+<td style="text-align: center">检查字符是否是字母或数字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean isalpha(char)</code></td>
+<td style="text-align: center">检查字符是否是字母</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean islower(char)</code></td>
+<td style="text-align: center">检查字符是否是小写字母</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean isupper(char)</code></td>
+<td style="text-align: center">检查字符是否是大写字母</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean isdigit(char)</code></td>
+<td style="text-align: center">检查字符是否是数字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean iscntrl(char)</code></td>
+<td style="text-align: center">检查字符是否是控制字符</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean isgraph(char)</code></td>
+<td style="text-align: center">检查字符是否是图形字符</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean isspace(char)</code></td>
+<td style="text-align: center">检查字符是否是空白字符</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean isblank(char)</code></td>
+<td style="text-align: center">检查字符是否是空格或 tab</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean isprint(char)</code></td>
+<td style="text-align: center">检查字符是否是打印字符</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean ispunct(char)</code></td>
+<td style="text-align: center">检查字符是否是标点符号</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>char tolower(char)</code></td>
+<td style="text-align: center">将字符转换为小写</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>char toupper(char)</code></td>
+<td style="text-align: center">将字符转换为大写</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>char from_ascii(number)</code></td>
+<td style="text-align: center">将 ascii 码转换为字符</td>
+</tr>
+</tbody></table>
+<h2 id='-30'>文字类型扩展</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>string append(string,var)</code></td>
+<td style="text-align: center">在尾部追加内容</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string insert(string,number,var)</code></td>
+<td style="text-align: center">在指定位置处插入内容</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string erase(string,number,number)</code></td>
+<td style="text-align: center">将范围内的字符删除</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string replace(string,number,number,var)</code></td>
+<td style="text-align: center">将从指定位置开始的指定个数字符替换</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string substr(string,number,number)</code></td>
+<td style="text-align: center">从指定位置截取指定长度的子文字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number find(string,string,number)</code></td>
+<td style="text-align: center">从指定位置开始从左向右查找一段文字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number rfind(string,string,number)</code></td>
+<td style="text-align: center">从指定位置开始从右向左查找一段文字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string cut(string,number)</code></td>
+<td style="text-align: center">从尾部删除指定长度的文字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean empty(string)</code></td>
+<td style="text-align: center">检查文字是否为空</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void clear(string)</code></td>
+<td style="text-align: center">清空</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number size(string)</code></td>
+<td style="text-align: center">获取字符个数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string tolower(string)</code></td>
+<td style="text-align: center">将文字转换为小写</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string toupper(string)</code></td>
+<td style="text-align: center">将文字转换为大写</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number to_number(string)</code></td>
+<td style="text-align: center">将文字转换为数值</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>array split(string,array)</code></td>
+<td style="text-align: center">使用指定的字符集合分割文字</td>
+</tr>
+</tbody></table>
+<h2 id='-31'>链表类型扩展</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>iterator</code></td>
+<td style="text-align: center">链表迭代器名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var front(list)</code></td>
+<td style="text-align: center">访问第一个元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var back(list)</code></td>
+<td style="text-align: center">访问最后一个元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[iterator] begin(list)</code></td>
+<td style="text-align: center">返回指向容器第一个元素的迭代器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[iterator] term(list)</code></td>
+<td style="text-align: center">返回指向容器尾端的迭代器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean empty(list)</code></td>
+<td style="text-align: center">检查容器是否为空</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number size(list)</code></td>
+<td style="text-align: center">返回容纳的元素数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void clear(list)</code></td>
+<td style="text-align: center">删除全部内容</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[iterator] insert(list,[iterator],var)</code></td>
+<td style="text-align: center">插入元素, 插入到迭代器指向的元素之前,返回指向插入的元素的迭代器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[iterator] erase(list,[iterator])</code></td>
+<td style="text-align: center">删除元素,返回指向要删除的元素的下一个元素的迭代器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void push_front(list,var)</code></td>
+<td style="text-align: center">在容器的开始处插入新元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void pop_front(list)</code></td>
+<td style="text-align: center">删除第一个元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void push_back(list,var)</code></td>
+<td style="text-align: center">将元素添加到容器末尾</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void pop_back(list)</code></td>
+<td style="text-align: center">删除最后一个元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void remove(list,var)</code></td>
+<td style="text-align: center">删除所有与指定变量相等的元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void reverse(list)</code></td>
+<td style="text-align: center">将该链表的所有元素的顺序反转</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void unique(list)</code></td>
+<td style="text-align: center">删除连续的重复元素</td>
+</tr>
+</tbody></table>
+<h3 id='-32'>链表迭代器名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>[iterator] forward([iterator])</code></td>
+<td style="text-align: center">向前移动迭代器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[iterator] backward([iterator])</code></td>
+<td style="text-align: center">向后移动迭代器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var data([iterator])</code></td>
+<td style="text-align: center">访问迭代器指向的元素</td>
+</tr>
+</tbody></table>
+<h2 id='-33'>数组类型扩展</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>iterator</code></td>
+<td style="text-align: center">数组迭代器名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var at(array,number)</code></td>
+<td style="text-align: center">访问指定的元素,同时进行越界检查</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var front(array)</code></td>
+<td style="text-align: center">访问第一个元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var back(array)</code></td>
+<td style="text-align: center">访问最后一个元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[iterator] begin(array)</code></td>
+<td style="text-align: center">返回指向容器第一个元素的迭代器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[iterator] term(array)</code></td>
+<td style="text-align: center">返回指向容器尾端的迭代器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean empty(array)</code></td>
+<td style="text-align: center">检查容器是否为空</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number size(array)</code></td>
+<td style="text-align: center">返回容纳的元素数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void clear(array)</code></td>
+<td style="text-align: center">删除全部内容</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[iterator] insert(array,[iterator],var)</code></td>
+<td style="text-align: center">插入元素, 插入到迭代器指向的元素之前,返回指向插入的元素的迭代器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[iterator] erase(array,[iterator])</code></td>
+<td style="text-align: center">删除元素,返回指向要删除的元素的下一个元素的迭代器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void push_front(array,var)</code></td>
+<td style="text-align: center">在容器的开始处插入新元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void pop_front(array)</code></td>
+<td style="text-align: center">删除第一个元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void push_back(array,var)</code></td>
+<td style="text-align: center">将元素添加到容器末尾</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void pop_back(array)</code></td>
+<td style="text-align: center">删除最后一个元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>hash_map to_hash_map(array)</code></td>
+<td style="text-align: center">将数组转换为散列表,要求数组中元素必须都是映射</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>list to_list(array)</code></td>
+<td style="text-align: center">将数组转换为链表</td>
+</tr>
+</tbody></table>
+<h3 id='-34'>数组迭代器名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>[iterator] forward([iterator])</code></td>
+<td style="text-align: center">向前移动迭代器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[iterator] backward([iterator])</code></td>
+<td style="text-align: center">向后移动迭代器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var data([iterator])</code></td>
+<td style="text-align: center">访问迭代器指向的元素</td>
+</tr>
+</tbody></table>
+<h2 id='-35'>映射类型扩展</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>var first(pair)</code></td>
+<td style="text-align: center">获取第一个元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var second(pair)</code></td>
+<td style="text-align: center">获取第二个元素</td>
+</tr>
+</tbody></table>
+<h2 id='-36'>哈希表类型扩展</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>boolean empty(hash_map)</code></td>
+<td style="text-align: center">检查容器是否为空</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number size(hash_map)</code></td>
+<td style="text-align: center">返回容纳的元素数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void clear(hash_map)</code></td>
+<td style="text-align: center">删除全部内容</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void insert(hash_map,var,var)</code></td>
+<td style="text-align: center">插入一对映射</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void erase(hash_map,var)</code></td>
+<td style="text-align: center">删除键对应的映射</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var at(hash_map,var)</code></td>
+<td style="text-align: center">访问指定的元素,同时进行越界检查</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean exist(hash_map,var)</code></td>
+<td style="text-align: center">查找是否存在映射</td>
+</tr>
+</tbody></table>
+<h3 id='-37'>数学名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>pi</code></td>
+<td style="text-align: center">圆周率(<code>Number</code>)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>e</code></td>
+<td style="text-align: center">自然底数(<code>Number</code>)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number abs(number)</code></td>
+<td style="text-align: center">绝对值</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number ln(number)</code></td>
+<td style="text-align: center">以 e 为底的对数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number log10(number)</code></td>
+<td style="text-align: center">以 10 为底的对数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number log(number a,number b)</code></td>
+<td style="text-align: center">以 a 为底 b 的对数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number sin(number)</code></td>
+<td style="text-align: center">正弦</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number cos(number)</code></td>
+<td style="text-align: center">余弦</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number tan(number)</code></td>
+<td style="text-align: center">正切</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number asin(number)</code></td>
+<td style="text-align: center">反正弦</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number acos(number)</code></td>
+<td style="text-align: center">反余弦</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number atan(number)</code></td>
+<td style="text-align: center">反正切</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number sqrt(number)</code></td>
+<td style="text-align: center">开方</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number root(number a,number b)</code></td>
+<td style="text-align: center">a 的 b 次方根</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number pow(number a,number b)</code></td>
+<td style="text-align: center">a 的 b 次方</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number min(number a,number b)</code></td>
+<td style="text-align: center">a 和 b 的最小值</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number max(number a,number b)</code></td>
+<td style="text-align: center">a 和 b 的最大值</td>
+</tr>
+</tbody></table>
+<h1 id='-38'>扩展类型，函数及变量参考</h1><h2 id='-39'>说明</h2>
+<p>扩展需要单独下载并使用 <code>import</code> 语句引入</p>
+<h2 id='regex'>regex 扩展</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>result</code></td>
+<td style="text-align: center">Regex Result 名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[regex] build(string)</code></td>
+<td style="text-align: center">构建一个正则表达式</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[result] match([regex],string)</code></td>
+<td style="text-align: center">匹配正则表达式到整个字符序列</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[result] search([regex],string)</code></td>
+<td style="text-align: center">匹配正则表达式到字符序列的任何部分</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string replace([regex],string str,string fmt)</code></td>
+<td style="text-align: center">以格式化的替换文本来替换正则表达式匹配的出现位置</td>
+</tr>
+</tbody></table>
+<h3 id='regex-result'>Regex Result 名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>boolean ready([result])</code></td>
+<td style="text-align: center">检查结果是否合法</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean empty([result])</code></td>
+<td style="text-align: center">检查匹配是否成功</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number size([result])</code></td>
+<td style="text-align: center">返回完全建立的结果状态中的匹配数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number length([result],number)</code></td>
+<td style="text-align: center">返回特定子匹配的长度</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number position([result],number)</code></td>
+<td style="text-align: center">返回特定子匹配首字符的位置</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string str([result],number)</code></td>
+<td style="text-align: center">返回特定子匹配的字符序列</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string prefix([result])</code></td>
+<td style="text-align: center">返回目标序列起始和完整匹配起始之间的子序列</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string suffix([result])</code></td>
+<td style="text-align: center">返回完整匹配结尾和目标序列结尾之间的子序列</td>
+</tr>
+</tbody></table>
+
+<p><strong>注意:
+Regex 扩展会抛出异常。</strong></p>
+<h2 id='darwin'>Darwin 扩展</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>ui</code></td>
+<td style="text-align: center">Darwin UI 名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>core</code></td>
+<td style="text-align: center">Darwin Core 名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>drawable</code></td>
+<td style="text-align: center">Darwin Drawable 名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>black</code></td>
+<td style="text-align: center">黑色</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>white</code></td>
+<td style="text-align: center">白色</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>red</code></td>
+<td style="text-align: center">红色</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>green</code></td>
+<td style="text-align: center">绿色</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>blue</code></td>
+<td style="text-align: center">蓝色</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>pink</code></td>
+<td style="text-align: center">粉色</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>yellow</code></td>
+<td style="text-align: center">黄色</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>cyan</code></td>
+<td style="text-align: center">青色</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[pixel] pixel(char,[color] front,[color] back)</code></td>
+<td style="text-align: center">创建一个像素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[drawable] picture(number width,number height)</code></td>
+<td style="text-align: center">创建一幅图片(<code>Drawable</code>)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void load()</code></td>
+<td style="text-align: center">加载 Darwin 功能</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void exit()</code></td>
+<td style="text-align: center">退出 Darwin 功能</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean is_kb_hit()</code></td>
+<td style="text-align: center">判断是否有按键按下</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>char get_kb_hit()</code></td>
+<td style="text-align: center">获取按下的按键</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void fit_drawable()</code></td>
+<td style="text-align: center">使画布适合当前屏幕大小</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[drawable] get_drawable()</code></td>
+<td style="text-align: center">获取画布</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void update_drawable()</code></td>
+<td style="text-align: center">将画布中的内容更新至屏幕上</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void set_frame_limit(number fps)</code></td>
+<td style="text-align: center">设置帧率</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void set_draw_line_precision(number)</code></td>
+<td style="text-align: center">设置画线精度</td>
+</tr>
+</tbody></table>
+<h3 id='darwin-ui'>Darwin UI 名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>void message_box(string title,string message,string button)</code></td>
+<td style="text-align: center">弹出一个消息对话框</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var input_box(string title,string message,string default,boolean format)</code></td>
+<td style="text-align: center">弹出一个输入对话框</td>
+</tr>
+</tbody></table>
+<h3 id='darwin-core'>Darwin Core 名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>char get_char([pixel])</code></td>
+<td style="text-align: center">获取像素的字符</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void set_char([pixel],char)</code></td>
+<td style="text-align: center">设置像素的字符</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[color] get_front_color([pixel])</code></td>
+<td style="text-align: center">获取像素的前景色</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void set_front_color([pixel],[color])</code></td>
+<td style="text-align: center">设置像素的前景色</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[color] get_back_color([pixel])</code></td>
+<td style="text-align: center">获取像素的背景色</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void set_back_color([pixel],[color])</code></td>
+<td style="text-align: center">设置像素的背景色</td>
+</tr>
+</tbody></table>
+<h2 id='darwin-drawable'>Darwin Drawable 名称空间</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>void load_from_file([drawable],string path)</code></td>
+<td style="text-align: center">从指定路径加载图片(Darwin CDPF 图片文件)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void save_to_file([drawable],string path)</code></td>
+<td style="text-align: center">将图片保存至指定路径(Darwin CDPF 图片文件)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void clear([drawable])</code></td>
+<td style="text-align: center">清空画布</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void fill([drawable],[pixel])</code></td>
+<td style="text-align: center">填充画布</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void resize([drawable],number width,number height)</code></td>
+<td style="text-align: center">重新设置画布大小</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number get_width([drawable])</code></td>
+<td style="text-align: center">获取画布宽度</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number get_height([drawable])</code></td>
+<td style="text-align: center">获取画布高度</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[pixel] get_pixel([drawable],number x,number y)</code></td>
+<td style="text-align: center">获取画布上的点</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void draw_pixel([drawable],number x,number y,[pixel])</code></td>
+<td style="text-align: center">在画布上画点</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void draw_line([drawable],number x1,number y1,number x2,number y2,[pixel])</code></td>
+<td style="text-align: center">在画布上画线</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void draw_rect([drawable],number x,number y,number width,number height,[pixel])</code></td>
+<td style="text-align: center">在画布上绘制线框</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void fill_rect([drawable],number x,number y,number width,number height,[pixel])</code></td>
+<td style="text-align: center">在画布上填充矩形</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void draw_triangle([drawable],number x1,number y1,number x2,number y2,number x3,number y3,[pixel])</code></td>
+<td style="text-align: center">在画布上绘制三角形</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void fill_triangle([drawable],number x1,number y1,number x2,number y2,number x3,number y3,[pixel])</code></td>
+<td style="text-align: center">在画布上填充三角形</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void draw_string([drawable],number x,number y,string,[pixel])</code></td>
+<td style="text-align: center">在画布上绘制文字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void draw_picture([drawable],number x,number y,[drawable])</code></td>
+<td style="text-align: center">将一幅图片绘制到画布上</td>
+</tr>
+</tbody></table>
+
+<p><strong>注意:
+Darwin 扩展会抛出异常。</strong></p>
+<h2 id='sqlite'>SQLite 扩展</h2>
+<p><code>statement</code>|SQLite 语句名称空间
+<code>integer</code>|SQLite 整数类型
+<code>real</code>|SQLite 浮点类型
+<code>text</code>|SQLite 文本类型</p>
+
+<p><code>[sqlite] open(string path)</code>|打开或创建一个 SQLite 数据库
+<code>[statement] prepare([sqlite] database,string sql)</code>|准备一个 SQLite 语句</p>
+<h3 id='sqlite-2'>SQLite 语句名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>boolean done([statement])</code></td>
+<td style="text-align: center">判断是否执行完毕</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void reset([statement])</code></td>
+<td style="text-align: center">重置语句</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void exec([statement])</code></td>
+<td style="text-align: center">执行语句</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number column_count([statement])</code></td>
+<td style="text-align: center">获取记录数量</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[type] column_type([statement],number index)</code></td>
+<td style="text-align: center">获取记录类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string column_name([statement],number index)</code></td>
+<td style="text-align: center">获取记录名称</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string column_decltype([statement],number index)</code></td>
+<td style="text-align: center">推导记录类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number column_integer([statement],number index)</code></td>
+<td style="text-align: center">获取整数记录</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number column_real([statement],number index)</code></td>
+<td style="text-align: center">获取浮点记录</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string column_text([statement],number index)</code></td>
+<td style="text-align: center">获取文本记录</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number bind_param_count([statement])</code></td>
+<td style="text-align: center">绑定参数数量</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void bind_integer([statement],number index,number data)</code></td>
+<td style="text-align: center">绑定整数参数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void bind_real([statement],number index,number data)</code></td>
+<td style="text-align: center">绑定浮点参数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void bind_text([statement],number index,string data)</code></td>
+<td style="text-align: center">绑定文本参数</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void clear_bindings([statement])</code></td>
+<td style="text-align: center">清除所有绑定</td>
+</tr>
+</tbody></table>
+
+<p><strong>注意:
+SQLite 扩展会抛出异常。</strong></p>
+<h2 id='network'>Network 扩展</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>tcp</code></td>
+<td style="text-align: center">TCP 套接字名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>udp</code></td>
+<td style="text-align: center">UDP 套接字名称空间</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string host_name()</code></td>
+<td style="text-align: center">获取主机名</td>
+</tr>
+</tbody></table>
+<h3 id='tcp'>TCP 套接字名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>socket</code></td>
+<td style="text-align: center">TCP 套接字类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[tcp::acceptor] acceptor([tcp::endpoint])</code></td>
+<td style="text-align: center">在端点上建立接收器</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[tcp::endpoint] endpoint(string address,number port)</code></td>
+<td style="text-align: center">在指定 IP 地址和端口上建立端点</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[tcp::endpoint] endpoint_v4(number port)</code></td>
+<td style="text-align: center">在任意 IPv4 地址上和指定端口上建立端点</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[tcp::endpoint] endpoint_v6(number port)</code></td>
+<td style="text-align: center">在任意 IPv6 地址上和指定端口上建立端点</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[tcp::endpoint] resolve(string host,string service)</code></td>
+<td style="text-align: center">解析主机的服务并建立端点</td>
+</tr>
+</tbody></table>
+<h2 id='tcp-2'>TCP 套接字类型扩展</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>void connect([tcp::socket],[tcp::endpoint])</code></td>
+<td style="text-align: center">连接到端点</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void accept([tcp::socket],[tcp::acceptor])</code></td>
+<td style="text-align: center">接受一个 TCP 请求</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void close([tcp::socket])</code></td>
+<td style="text-align: center">关闭套接字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean is_open([tcp::socket])</code></td>
+<td style="text-align: center">查询套接字是否打开</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string receive([tcp::socket],number buffer_size)</code></td>
+<td style="text-align: center">接收一些数据,最大长度为 <code>buffer_size</code></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void send([tcp::socket],string buffer)</code></td>
+<td style="text-align: center">发送一些数据</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[tcp::endpoint] remote_endpoint([tcp::socket])</code></td>
+<td style="text-align: center">获取远程端点</td>
+</tr>
+</tbody></table>
+<h3 id='udp'>UDP 套接字名称空间</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>socket</code></td>
+<td style="text-align: center">UDP 套接字类型</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[udp::endpoint] endpoint(string address,number port)</code></td>
+<td style="text-align: center">在指定 IP 地址和端口上建立端点</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[udp::endpoint] endpoint_v4(number port)</code></td>
+<td style="text-align: center">在任意 IPv4 地址上和指定端口上建立端点</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[udp::endpoint] endpoint_v6(number port)</code></td>
+<td style="text-align: center">在任意 IPv6 地址上和指定端口上建立端点</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[udp::endpoint] resolve(string host,string service)</code></td>
+<td style="text-align: center">解析主机的服务并建立端点</td>
+</tr>
+</tbody></table>
+<h2 id='udp-2'>UDP 套接字类型扩展</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>void open_v4([udp::socket])</code></td>
+<td style="text-align: center">打开 IPv4 协议套接字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void open_v6([udp::socket])</code></td>
+<td style="text-align: center">打开 IPv6 协议套接字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void bind([udp::socket],[udp::endpoint])</code></td>
+<td style="text-align: center">将套接字绑定到端点上</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void close([udp::socket])</code></td>
+<td style="text-align: center">关闭套接字</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean is_open([udp::socket])</code></td>
+<td style="text-align: center">查询套接字是否打开</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>string receive_from([udp::socket],number buffer_size,[udp::endpoint])</code></td>
+<td style="text-align: center">从远程端点处接收一些数据,最大长度为 <code>buffer_size</code></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void send_to([udp::socket],string buffer,[udp::endpoint])</code></td>
+<td style="text-align: center">发送一些数据到远程端点</td>
+</tr>
+</tbody></table>
+
+<p>注意:
+0. TCP 套接字和 UDP 套接字的端点不能通用。
+0. Network 扩展会抛出异常。</p>
+<h2 id='api'>流式 API 扩展</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>[streams] of(list)</code></td>
+<td style="text-align: center">从 <code>list</code> 构建一个 <code>stream</code> 对象</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>void for_each([streams],function action)</code></td>
+<td style="text-align: center">对流中每一个元素执行一次 <code>action</code></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[streams] peek([streams],function action)</code></td>
+<td style="text-align: center">与 <code>for_each</code> 功能相同,但 <code>peek</code> 不会终止流</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>number count([streams])</code></td>
+<td style="text-align: center">返回当前流中可操作元素的数目</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[streams] skip([streams],number)</code></td>
+<td style="text-align: center">跳过前 <code>n</code> 个元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[streams] reverse([streams])</code></td>
+<td style="text-align: center">将流中的元素顺序颠倒</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[streams] filter([streams],function predicate)</code></td>
+<td style="text-align: center">用当前流中的所有符合条件的元素创建一个新流</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[streams] map([streams],function mapper)</code></td>
+<td style="text-align: center">对流中的元素执行 <code>mapper</code>,并将结果创建一个新流</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[streams] reduce([streams],identity,function accumulator)</code></td>
+<td style="text-align: center">对流中的元素执行 <code>accumulator</code>,并将结果返回</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>[streams] limit([streams],number)</code></td>
+<td style="text-align: center">设置流中可操作元素的数目</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean any_match([streams],function predicate)</code></td>
+<td style="text-align: center">只要流中有元素符合 <code>predicate</code>,就返回 <code>true</code></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean all_match([streams],function predicate)</code></td>
+<td style="text-align: center">只有流中所有元素都符合 <code>predicate</code>,才返回 <code>true</code></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>boolean none_match([streams],function predicate)</code></td>
+<td style="text-align: center">只有流中所有元素都不符合 <code>predicate</code>,才返回 <code>true</code></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var find_any([streams])</code></td>
+<td style="text-align: center">从流中任意选取一个元素返回</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>var find_first([streams])</code></td>
+<td style="text-align: center">返回流中第一个元素</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>list to_list([streams])</code></td>
+<td style="text-align: center">将当前流中可操作元素作为一个 <code>list</code> 返回</td>
+</tr>
+</tbody></table>
+<h1 id='-40'>扩展指南</h1><h2 id='-41'>注意事项</h2>
+<p>由于各个编译器生成的二进制之间并不兼容,请一定注意使用与 CovScript 主程序相同的编译器编译扩展。<br/>
+CovScript 官方二进制文件使用的编译器为:</p>
+
+<ul>
+<li>Windows 32 位: gcc version 7.2.0 (i686-posix-sjlj-rev1, Built by MinGW-W64 project)</li>
+<li>Windows 64 位: gcc version 7.2.0 (x86_64-posix-seh-rev1, Built by MinGW-W64 project)</li>
+</ul>
+
+<p>对于 Linux,应该不存在二进制不兼容的问题,其他操作系统未测试</p>
+<h2 id='covariant-script-extension'>Covariant Script Extension 简介</h2>
+<p>Covariant Script Extension (CSE) 是 Covariant Script Runtime 与外界交互的唯一方式,
+Covariant Script 语言核心功能是 Covariant Script Runtime 通过内部 CSE 调用 C++ Runtime 和 System Call 实现的。
+本指南介绍的是 Covariant Script 外部 CSE 的编写方法。外部 CSE 实质上为动态链接库 (Dynamic Linked Library),
+由 Covariant Script 主程序在运行时动态链接并读取特定符号实现对主程序的扩展。</p>
+<h2 id='covariant-script-callable'>Covariant Script Callable 简介</h2>
+<p>Covariant Script Callable 是 Covariant Script 语言核心中的抽象函数对象,
+大部分 Covariant Script Runtime 的函数调用都会被抽象为 <code>Callable</code> 调用。</p>
+<h2 id='cpp-native-interface'>CPP Native Interface 简介</h2>
+<p>C/C++ Native Interface (CNI) 是允许 Covariant Script 调用 C/C++函数的抽象接口,
+CNI 能够将 <code>Callable</code> 发起的函数调用转发至 C/C++函数。</p>
+<h2 id='-42'>准备工作</h2>
+<p>确保你的编译器与 Covariant Script 二进制文件使用的编译器相同,
+或者你也可以使用你自己的编译器编译 Covariant Script 源代码得到与之兼容的二进制文件, 详情请阅读 README。</p>
+
+<p>请访问 <a href="https://github.com/covscript/covscript/">Covariant Script Github 主页</a>下载最新版本源代码
+我们需要用到的是 include 和 sources 这两个文件夹</p>
+<h2 id='-43'>需要的头文件</h2>
+<p>你需要把整个 include 文件夹加入 include 搜索目录。</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">代码</th>
+<th style="text-align: center"><p/></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">covscript/extension.hpp</td>
+<td style="text-align: center">包含了了必要的入口和函数</td>
+</tr>
+<tr>
+<td style="text-align: center">covscript/cni.hpp</td>
+<td style="text-align: center">开启 CNI 支持</td>
+</tr>
+</tbody></table>
+<h2 id='covariant-script'>Covariant Script 内建类型</h2>
+<p>所有 Covariant Script 内建类型皆在 <code>cs</code> 命名空间内有定义<br/>
+包括: <code>cs::number</code> <code>cs::boolean</code> <code>cs::string</code> <code>cs::list</code> <code>cs::array</code> <code>cs::pair</code> <code>cs::hash_map</code>
+字符类型即为 C++的 <code>char</code> 类型,无需特意声明</p>
+<h2 id='-44'>扩展类对象</h2>
+<p>每一个 CSE 都必须包含一个静态 <code>cs::extension</code> 对象
+例如:
+<code>cpp
+static cs::extension my_ext;
+</code></p>
+<h2 id='-45'>入口函数</h2>
+<p>CSE 要求必须定义一个类似于 <code>main</code> 函数的入口函数,这个函数的作用是加载扩展的功能并返回 CSE 包含的静态 <code>cs::extension</code> 对象:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="n">cs</span><span class="o">::</span><span class="n">extension</span><span class="o">*</span> <span class="n">cs_extension</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="c1">// TODO
+</span>  <span class="k">return</span> <span class="o">&amp;</span><span class="n">my_ext</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<p>其中,<code>my_ext</code> 可以使用自定义的 <code>cs::extension</code> 静态对象的名称代替。</p>
+<h2 id='-46'>向扩展中添加变量或函数</h2>
+<p><code>cs::extension</code> 包含一个名为 <code>add_var</code> 的方法,只需在入口函数中调用 <code>my_ext.add_var</code> 即可。</p>
+<pre class="highlight cpp tab-cpp"><code><span class="n">my_ext</span><span class="p">.</span><span class="n">add_var</span><span class="p">(</span><span class="err">变量名</span><span class="p">[</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">],</span><span class="err">变量</span><span class="p">[</span><span class="n">cs_impl</span><span class="o">::</span><span class="n">any</span><span class="p">]);</span>
+</code></pre>
+<p>其中,<code>cs_impl::any</code> 支持 make 静态方法显式构造一个变量:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="n">cs_impl</span><span class="o">::</span><span class="n">any</span><span class="o">::</span><span class="n">make</span><span class="o">&lt;</span><span class="err">类型</span><span class="o">&gt;</span><span class="p">(</span><span class="err">构造参数</span><span class="p">)</span>
+</code></pre>
+<p>如果要保护一个变量,可以使用其他构造方法:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="n">cs_impl</span><span class="o">::</span><span class="n">any</span><span class="o">::</span><span class="n">make_protect</span>
+</code></pre>
+<p>变量不能被赋值</p>
+<pre class="highlight cpp tab-cpp"><code><span class="n">cs_impl</span><span class="o">::</span><span class="n">any</span><span class="o">::</span><span class="n">make_constant</span>
+</code></pre>
+<p>变量不能被赋值或修改</p>
+<pre class="highlight cpp tab-cpp"><code><span class="n">cs_impl</span><span class="o">::</span><span class="n">any</span><span class="o">::</span><span class="n">make_single</span>
+</code></pre>
+<p>变量不能被赋值,修改或复制</p>
+<h2 id='covariant-script-2'>Covariant Script 被保护的变量</h2>
+<p>对于函数,Covariant Script 会将所有 <code>Callable</code> 对象视为函数。<br/>
+<code>Callable</code> 对象支持任意形式为 <code>cs_impl::any(std::deque&lt;cs_impl::any&gt;&amp;)</code> 的函数,包括 Lambda 表达式。</p>
+
+<p>如果你不想使用 CNI, 你可以直接将你的函数接入到 <code>Callable</code> 中,如:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="cp">#include &lt;covscript/extension.hpp&gt;
+#include &lt;iostream&gt;
+</span><span class="k">static</span> <span class="n">cs</span><span class="o">::</span><span class="n">extension</span> <span class="n">my_ext</span><span class="p">;</span>
+<span class="n">cs_impl</span><span class="o">::</span><span class="n">any</span> <span class="n">printall</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">deque</span><span class="o">&lt;</span><span class="n">cs_impl</span><span class="o">::</span><span class="n">any</span><span class="o">&gt;&amp;</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="n">it</span><span class="o">:</span><span class="n">args</span><span class="p">)</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">it</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">cs</span><span class="o">::</span><span class="n">number</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">cs</span><span class="o">::</span><span class="n">extension</span><span class="o">*</span> <span class="n">cs_extension</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">my_ext</span><span class="p">.</span><span class="n">add_var</span><span class="p">(</span><span class="s">"printall"</span><span class="p">,</span><span class="n">cs_impl</span><span class="o">::</span><span class="n">any</span><span class="o">::</span><span class="n">make</span><span class="o">&lt;</span><span class="n">cs</span><span class="o">::</span><span class="n">callable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">printall</span><span class="p">));</span>
+  <span class="k">return</span> <span class="o">&amp;</span><span class="n">my_ext</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<p>注意,如果你不想返回值,请务必返回一个 <code>cs::number(0)</code>, 不然 Covariant Script 可能会出现错误。<br/>
+如果使用 CNI,则简单得多,如:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="cp">#include &lt;covscript/extension.hpp&gt;
+#include &lt;covscript/cni.hpp&gt;
+#include &lt;iostream&gt;
+</span>
+<span class="k">static</span> <span class="n">cs</span><span class="o">::</span><span class="n">extension</span> <span class="n">my_ext</span><span class="o">:</span>
+
+<span class="kt">void</span> <span class="n">print</span><span class="p">(</span><span class="k">const</span> <span class="n">cs_impl</span><span class="o">::</span><span class="n">any</span><span class="o">&amp;</span> <span class="n">val</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">val</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">cs</span><span class="o">::</span><span class="n">extension</span><span class="o">*</span> <span class="n">cs_extension</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">my_ext</span><span class="p">.</span><span class="n">add_var</span><span class="p">(</span><span class="s">"print"</span><span class="p">,</span> <span class="n">cs_impl</span><span class="o">::</span><span class="n">any</span><span class="o">::</span><span class="n">make</span><span class="o">&lt;</span><span class="n">cs</span><span class="o">::</span><span class="n">callable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cs</span><span class="o">::</span><span class="n">cni</span><span class="p">(</span><span class="n">print</span><span class="p">)));</span>
+  <span class="k">return</span> <span class="o">&amp;</span><span class="n">my_ext</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<p>注意,CNI 必须通过 <code>Callable</code> 接入 Covariant Script 否则将不能被识别为函数。<br/>
+CNI 理论上支持任意形态的 C/C++函数,但由于语言限制不支持重载函数和模板函数。<br/>
+为确保兼容性,接入 CNI 的 C/C++函数最好使用 Covariant Script 内建类型作为参数,因为 CNI 并不支持参数类型的隐式转换。</p>
+
+<p>对于引用,CNI 支持将 Covariant Script 中的变量地址直接映射至参数的引用上,
+也就是说如果你使用了非常量引用将可以修改 Covariant Script 中的变量,但对于被保护的变量此举将引发错误。<br/>
+为提高性能,请尽量使用常量引用和引用。<br/>
+对于返回类型为 <code>void</code> 的函数,CNI 将默认返回 0。</p>
+<h2 id='-47'>向优化器请求优化函数的调用</h2>
+<p>Covariant Script 优化器支持优化函数调用,但此举的前提是函数手动向优化器请求优化。</p>
+
+<p>原则上请求优化的函数应满足以下要求:
+0. 不进行 I/O 操作
+0. 不堵塞线程
+0. 不修改运行时环境
+0. 不依赖运行时环境</p>
+
+<p>要注意的是一旦优化器优化了一个函数调用,那么这个函数调用将不会出现在运行时,比如一个计数器函数请求了优化,
+那么即便这个函数在循环中调用,可能这个计时器的值将一直不变。</p>
+
+<p>要请求优化,只需将 <code>Callable</code> 构造函数的第二个可选参数设置为 <code>true</code>,并将变量设置为保护即可,如:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="n">my_ext</span><span class="p">.</span><span class="n">add_var</span><span class="p">(</span><span class="s">"test"</span><span class="p">,</span><span class="n">cs_impl</span><span class="o">::</span><span class="n">make_protect</span><span class="o">&lt;</span><span class="n">cs</span><span class="o">::</span><span class="n">callable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cs</span><span class="o">::</span><span class="n">cni</span><span class="p">(</span><span class="n">test</span><span class="p">),</span><span class="nb">true</span><span class="p">));</span>
+</code></pre>
+<p>注意,不要将变量设置为 <code>constant</code> 或 <code>single</code>,这将阻止 Covariant Script 调用这个函数。</p>
+<h2 id='-48'>类型扩展</h2>
+<p>可以通过特化 CovScript 类型相关函数扩展类型。
+CovScript 会自动加载内建类型扩展,无需手动加载。</p>
+
+<p>比较函数:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">cs_impl</span><span class="o">::</span><span class="n">compare</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="p">)</span>
+</code></pre>
+<p>特化此函数以支持比较操作,默认情况下如未找到类型定义的 <code>operator==</code>或者特化的 <code>compare</code> 函数将直接比较变量的地址。</p>
+
+<p>整数转换函数:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">long</span> <span class="n">cs_impl</span><span class="o">::</span><span class="n">to_integer</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="p">)</span>
+</code></pre>
+<p>特化此函数以支持向整数的转换。</p>
+
+<p><br/><br/></p>
+
+<p>字符串转换函数:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">cs_impl</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="p">)</span>
+</code></pre>
+<p>特化此函数以支持向字符串的转换。</p>
+
+<p><br/><br/></p>
+
+<p>哈希函数:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">cs_impl</span><span class="o">::</span><span class="n">hash</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="p">)</span>
+</code></pre>
+<p>特化此函数以支持生成哈希值。</p>
+
+<p><br/><br/></p>
+
+<p>GC 标记函数:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">cs_impl</span><span class="o">::</span><span class="n">detach</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="p">)</span>
+</code></pre>
+<p>对于含有 <code>cs::var</code> 的容器,应特化此函数并分别调用每个 <code>cs::var</code> 实例的 <code>detach</code> 方法。</p>
+
+<p><br/><br/></p>
+
+<p>类型名函数:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span><span class="k">constexpr</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">cs_impl</span><span class="o">::</span><span class="n">get_name_of_type</span><span class="p">()</span>
+</code></pre>
+<p>特化此函数以支持反馈更友好的类型名,如未特化将默认返回 <code>typeid(T).name()</code>。</p>
+
+<p><br/><br/></p>
+
+<p>类型方法扩展函数:</p>
+<pre class="highlight cpp tab-cpp"><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">cs</span><span class="o">::</span><span class="n">extension_t</span> <span class="o">&amp;</span><span class="n">cs_impl</span><span class="o">::</span><span class="n">get_ext</span><span class="p">()</span>
+</code></pre>
+<p>特化此函数并返回类型方法的扩展将为此类型引入点运算符成员访问功能的支持。</p>
+
+<p><code>cs::extension_t</code> 是 <code>std::shared_ptr&lt;cs::extension_holder&gt;</code>的别名,
+调用 <code>cs::make_shared_extension(cs::extension&amp;)</code> 可获取共享的扩展类对象。
+对于扩展中的函数, CovScript 将会把调用对象作为第一个参数传入。</p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
